@@ -39,6 +39,7 @@ install_dependencies() {
         libglib2.0-dev
         libpango1.0-dev
         pkg-config
+        build-essential
     )
 
     if ! command -v apt >/dev/null 2>&1; then
