@@ -1,7 +1,6 @@
 # Runkit
 
-Graphical manager runit services. The application targets a friendly, guided user experience that balances power-user workflows with newcomers who just want to start, stop, or understand system services. While it was written for Void Linux, it should work on any disto which uses runit.
-
+Graphical manager runit services. The application targets a friendly, guided user experience that balances power-user workflows with newcomers who just want to start, stop, or understand system services. This is a fork to make it work on Debian GNU/Linux
 ## Screenshots
 
 <p align="center">
@@ -26,7 +25,7 @@ Graphical manager runit services. The application targets a friendly, guided use
 
 ## Installation
 
-For Void Linux the repository ships an installer that builds release binaries and places them under `/usr/libexec`. It will also install any dependencies, copy icons, lay down the desktop entry, seed service descriptions, install the system D-Bus definition, and copy the polkit policy.
+For Debian the repository ships an installer that builds release binaries and places them under `/usr/libexec`. It will also install any dependencies, copy icons, lay down the desktop entry, seed service descriptions, install the system D-Bus definition, and copy the polkit policy.
 
 ```bash
 chmod +x start.sh
@@ -40,7 +39,7 @@ After installation, you can launch directly from your application launcher or vi
 This workspace requires the Rust 1.83+ toolchain. The GTK frontend also depends on system libraries:
 
 ```bash
-sudo xbps-install -S rustup gtk4-devel libadwaita-devel glib-devel pango-devel pkg-config
+sudo apt install rustup gtk4-devel libadwaita-devel glib-devel pango-devel pkg-config
 rustup default stable
 ```
 
