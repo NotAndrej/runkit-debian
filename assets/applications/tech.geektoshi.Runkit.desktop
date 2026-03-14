@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Runkit
-Comment=Manage Void Linux runit services
+Comment=Manage runit services
 Exec=/usr/libexec/runkit
 Icon=runkit
 Terminal=false
