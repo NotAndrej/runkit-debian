@@ -1,6 +1,6 @@
 # Runkit
 
-Graphical manager runit services. The application targets a friendly, guided user experience that balances power-user workflows with newcomers who just want to start, stop, or understand system services. This is a fork to make it work on Debian GNU/Linux
+Graphical manager runit services. The application targets a friendly, guided user experience that balances power-user workflows with newcomers who just want to start, stop, or understand system services. This is a fork to make it work on Debian GNU/Linux.
 ## Screenshots
 
 <p align="center">
