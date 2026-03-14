@@ -34,23 +34,24 @@ require_sudo() {
 install_dependencies() {
     local deps=(
         rustup
-        gtk4-devel
-        libadwaita-devel
-        glib-devel
-        pango-devel
+        libgtk-4-dev
+        libadwaita-1-dev
+        libglib2.0-dev
+        libpango1.0-dev
         pkg-config
+        cargo
     )
 
-    if ! command -v xbps-query >/dev/null 2>&1; then
-        echo "xbps-query not found; installing all dependencies..."
-        sudo xbps-install -S "${deps[@]}"
+    if ! command -v apt >/dev/null 2>&1; then
+        echo "apt not found; installing all dependencies..."
+        sudo apt install "${deps[@]}"
         return
     fi
 
     local missing=()
     echo "Checking system dependencies..."
     for dep in "${deps[@]}"; do
-        if xbps-query -p pkgver "$dep" >/dev/null 2>&1; then
+        if dpkg -s "$dep" >/dev/null 2>&1; then
             echo "  already installed: ${dep}"
         else
             echo "  missing: ${dep}"
@@ -60,7 +61,7 @@ install_dependencies() {
 
     if (( ${#missing[@]} > 0 )); then
         echo "Installing missing dependencies: ${missing[*]}"
-        sudo xbps-install -S "${missing[@]}"
+        sudo apt install "${missing[@]}"
     else
         echo "All dependencies already satisfied."
     fi
