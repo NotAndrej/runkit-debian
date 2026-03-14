@@ -39,7 +39,7 @@ After installation, you can launch directly from your application launcher or vi
 This workspace requires the Rust 1.83+ toolchain. The GTK frontend also depends on system libraries:
 
 ```bash
-sudo apt install rustup gtk4-devel libadwaita-devel glib-devel pango-devel pkg-config
+sudo apt install rustup libgtk-4-dev libadwaita-1-dev libglib2.0-dev libpango1.0-dev pkg-config
 rustup default stable
 ```
 
