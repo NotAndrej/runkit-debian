@@ -10,7 +10,7 @@ use std::process::Command;
 use std::time::Duration;
 use thiserror::Error;
 
-pub const DEFAULT_SERVICE_DIR: &str = "/etc/sv";
+pub const DEFAULT_SERVICE_DIR: &str = "/etc/runit/runsvdir/current/";
 pub const DEFAULT_ENABLED_DIR: &str = "/var/service";
 
 static RUNNING_REGEX: Lazy<Regex> = Lazy::new(|| {
